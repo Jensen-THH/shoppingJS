@@ -1,0 +1,215 @@
+/*************************
+*******Footer CSS******
+**************************/
+
+#footer {
+    background: #F0F0E9;
+}
+
+.footer-top .container {
+    border-bottom: 1px solid #E0E0DA;
+    padding-bottom: 20px;
+}
+
+.companyinfo {
+    margin-top: 57px;
+}
+
+.companyinfo h2 {
+    color: #B4B1AB;
+    font-family: abel;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.companyinfo h2 span {
+    color: #03a678;
+}
+
+.companyinfo p {
+    color: #B3B3AD;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer-top .col-sm-3 {
+    overflow: hidden;
+}
+
+.video-gallery {
+    margin-top: 57px;
+    position: inherit;
+}
+
+.video-gallery a img {
+    height: 100%;
+    width: 100%;
+}
+
+.iframe-img {
+    position: relative;
+    display: block;
+    height: 61px;
+    margin-bottom: 10px;
+    border: 2px solid #CCCCC6;
+    border-radius: 3px;
+}
+
+.overlay-icon {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 61px;
+    background: #03a678;
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 0;
+    display: block;
+    opacity: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+.overlay-icon i {
+    position: relative;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.video-gallery a:hover .overlay-icon {
+    opacity: 1;
+}
+
+.video-gallery p {
+    color: #8C8C88;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.video-gallery h2 {
+    color: #8c8c88;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+.address {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.address img {
+    width: 100%;
+}
+
+.address p {
+    color: #666663;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    left: 25px;
+    position: absolute;
+    top: 50px;
+}
+
+.footer-widget {
+    margin-bottom: 68px;
+}
+
+.footer-widget .container {
+    border-top: 1px solid #FFFFFF;
+    padding-top: 15px;
+}
+
+.single-widget h2 {
+    color: #666663;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.single-widget h2 i {
+    margin-right: 15px;
+}
+
+.single-widget ul li a {
+    color: #8C8C88;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+.single-widget ul li a i {
+    margin-right: 18px;
+}
+
+.single-widget ul li a:hover {
+    background: none;
+    color: #03a678;
+}
+
+.searchform input {
+    border: 1px solid #DDDDDD;
+    color: #CCCCC6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 0;
+    outline: medium none;
+    padding: 7px;
+    width: 212px;
+}
+
+.searchform button {
+    background: #03a678;
+    border: medium none;
+    border-radius: 0;
+    margin-left: -5px;
+    margin-top: -3px;
+    padding: 7px 17px;
+}
+
+.searchform button i {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.searchform button:hover,
+.searchform button:focus {
+    background-color: #03a678;
+}
+
+.searchform p {
+    color: #8C8C88;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 25px;
+}
+
+.footer-bottom {
+    background: #D6D6D0;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    color: #363432;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: 15px;
+}
+
+.footer-bottom p span a {
+    color: #03a678;
+    font-style: italic;
+    text-decoration: underline;
+}

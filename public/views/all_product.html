@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="text-center p-4">
+     <h2  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-transform: uppercase;">{{cgy}}</h2>
+    </div>
+     <div class="row">
+    
+         <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around" ng-repeat="item in products | filter: {category:cgy}">
+          
+           <div class="card">
+                 <div class="product_x w-100">
+               <img class="first-img w-100" ng-src="{{item.images[1]}}" alt="{{item.name}}">
+               <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+             </div>
+               <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+                   <div class="w-75 d-block  align-item-center justify-content-center">
+                 <h6 class="card-title fuchsia-rose-text "> <a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+                 <small class="card-text">{{item.sku}}</small>
+                 </div>
+                 <div class="d-wrap mr-auto align-item-center justify-content-around">
+                     
+                     <p class="d-block">{{item.price.sale}}</p>
+                     <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+                 </div>
+               </div>
+               <div class="card-footer w-100 d-flex justify-content-center">
+                   <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+               </div>
+             </div>
+         </div>
+     </div>
+ </div>

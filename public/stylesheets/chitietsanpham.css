@@ -1,0 +1,147 @@
+
+.newarrival{
+    background: green;
+    width: 50px;
+    color: white;
+    font-size:12px ;
+    font-weight: bold;
+
+}
+.price{
+    color: #FE980F;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 20px;
+}
+input{
+    margin-top: 10px !important;
+    border: solid 1px #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 50px;
+}
+.cart{
+    margin-top: 10px;
+}
+.c:focus{
+    background-color: rgba(36, 34, 34, 0.815);
+    color: white;
+}
+footer{
+    width: 100%;
+    margin-top: 100px;
+}
+.mb-0:hover{
+   text-decoration: none !important;
+   color: black;
+   }
+.mb-0{
+    color: rgba(59, 59, 59, 0.747);
+}
+.card-header a:hover{
+    text-decoration: none;
+
+}
+
+.sp
+{
+    height: 400px;
+    display: block;
+    margin-top: 20px;
+
+}
+.sp .chitietsp {
+    max-width: 300px;
+    height: 100%;
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 5px 5px 7px -1px rgba(0,0,0,0.46);
+}
+.sp .chitietsp img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.detail_img img:hover{
+    transform: scale(1.8) !important;
+    transition: all 0.7s ease;
+}
+.sp .chitietsp img:hover
+  {-webkit-transform: scale(1.1);
+    transform: scale(1.1) !important;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;}
+.chitietsp .img2 img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+   
+}
+.chitietsp:hover .img2 img{
+    display: block;
+    top:0;
+}
+.sp .chitietsp .heart{
+    position: absolute;
+    top:6%;
+    left: 83%;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color: white;
+    padding: 5px 5px;
+    background: rgba(221, 96, 96, 0.527);
+    border-radius:100%;
+   z-index: 100;
+}
+.sp .chitietsp .heart:hover{
+    background-color: rgba(224, 215, 215, 0.616);
+    color: red;
+}
+.sp .chitietsp .type{
+    position: absolute;
+    bottom: -30%;
+    background-color: rgba(223, 217, 217, 0.616);
+    width: 100%;
+    display: flex;
+ 
+}
+.sp .chitietsp .type .type-detail{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px !important;
+  }
+.type-detail span:hover{
+color: black !important;
+  }
+.sp .chitietsp .type .cart{
+    padding: 15px;
+    justify-content: center;
+    font-size: 25px;
+    border-radius:25%;
+    margin-left: auto;
+    margin-right: 5px;
+    
+}
+.sp .chitietsp .type .cart i{
+    margin-top: 17px;
+    
+}
+.sp .chitietsp .type .cart:focus{
+    background-color: rgba(255, 0, 0, 0.726);
+}
+.sp .chitietsp .type .cart:hover{
+    background-color: rgba(52, 204, 204, 0.678);
+} 
+.sp .chitietsp:hover .type{
+    bottom: 0%;
+    transition: all ease-in-out 0.8s;
+}

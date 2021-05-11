@@ -1,0 +1,107 @@
+
+
+
+<!-- chi tiet sp -->
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div  class="carousel slide" data-ride="carousel">
+               
+                <div class="carousel-inner">
+                    <div class="carousel-item detail_img active">
+                        <img class="d-block w-100 " ng-src="{{productx.images[0]}}" alt="First slide">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <p class="newarrival text-center">New</p>
+            <h2>{{productx.name}}</h2>
+            <p>{{productx.sku}}</p>
+            <i class="fas fa-star" style="color: green;"></i>
+            <i class="fas fa-star" style="color: green;"></i>
+            <i class="fas fa-star" style="color: green;"></i>
+            <i class="fas fa-star" style="color: green;"></i>
+            <i class="far fa-star" style="color: green;"></i>
+            <p class="price">{{productx.price.sale}}</p>
+            <p><b>Tình trạng:</b> còn hàng</p>
+            <p><b>Sản phẩm:</b> mới</p>
+            <p><b>Nhãn hiệu:</b> Jensen</p>
+            <div class="size"><label>Chọn size: </label> 
+                  <button ng-repeat="size in sizes" type="button" class="c btn btn-outline-dark m-1" style="width:45px">{{size}}</button>
+            <br>
+            <button ng-click="addtoCart(productx)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-danger cart">ADD TO CART</button>
+        </div>
+
+        <div class="pt-5">
+          <p>
+            {{productx.description}}
+          </p>
+        </div>
+    </div>
+  <!--huong dan --> 
+
+ 
+  <!--huong dan end -->  
+<hr size="5" style="height: 5px; background-color: rgba(128, 125, 125, 0.74);">
+</div>
+<div class="container">
+    <div class="row">
+        <h3 class="col-md-12 text-center p-5" style=" text-shadow: 2px 2px 5px rgba(19, 18, 18, 0.644);"> SẢN PHẨM LIÊN QUAN </h3>
+    </div>
+    <div class="row flex-wrap align-item-center justify-content-around ">
+        <!--==========1=============-->
+        <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+        ng-repeat="item in products | orderBy : ramdom  | limitTo: 4 : ramdom ">
+        <div class="card">
+          <div class="product_x w-100">
+            <img class="first-img w-100" ng-src="{{item.images[0]}}" alt="{{item.name}}">
+            <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+          </div>
+          <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+            <div class="w-75 d-block  align-item-center justify-content-center">
+              <h6 class="card-title fuchsia-rose-text "><a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+              <small class="card-text">{{item.sku}}</small>
+            </div>
+            <div class="d-wrap mr-auto align-item-center justify-content-around">
+  
+              <p class="d-block">{{item.price.sale}}</p>
+              <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+            </div>
+          </div>
+          <div class="card-footer w-100 d-flex justify-content-center">
+            <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+        <!--==========1=============-->
+  
+    </div>
+   
+</div>
+<!-- <div class="container d-flex">
+  <div class="justify-content-center align-item-center mx-auto">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">»</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+  </div>
+</div> -->
+<!-- chi tiet sp -->
+
+

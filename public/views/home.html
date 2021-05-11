@@ -1,0 +1,220 @@
+<!-- container //  -->
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/banner/banner2 .jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+
+</div>
+
+<!--banner end -->
+<hr class="mt-5">
+
+<!--Portfolio Section-->
+<section id="portfolio" class="portfolio lightbg">
+  <div class="container">
+    <div class="row">
+      <div class="main_portfolio roomy-100">
+        <div class="col-md-12 col-md-offset-2">
+          <div class="head_title text-center" style="color:#D93E30">
+            <h2>Collections</h2>
+            <div class="separator_auto"></div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod nostrud exerci tation ullamcorper
+              suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+          </div>
+        </div>
+
+        <div class="portfolio_content">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="portfolio_item">
+                  <img src="/images/banner/banner3.jpg" alt="" />
+                  <div class="portfolio_hover text-center">
+                    <h6 class="text-uppercase text-white">Winter</h6>
+                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
+                    <div class="portfolio_hover_icon">
+                      <a href="/images/banner/banner2 .jpg" class="popup-img"><i class="fa fa-expand"></i></a>
+                      <a href=""><i class="fa fa-search"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 m-top-30 mt-4">
+                <div class="portfolio_item portfolio_item2">
+                  <img src="/images/banner/banner2.jpg" alt="" />
+                  <div class="portfolio_hover text-center">
+                    <h6 class="text-uppercase text-white">Sport</h6>
+                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
+                    <div class="portfolio_hover_icon">
+                      <a href="/images/banner/banner2 .jpg" class="popup-img"><i class="fa fa-expand"></i></a>
+                      <a href=""><i class="fa fa-search"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 m-top-30 mt-4">
+                <div class="portfolio_item portfolio_item2">
+                  <img src="/images/banner/banner3.jpg" alt="" />
+                  <div class="portfolio_hover text-center">
+                    <h6 class="text-uppercase text-white">Summer</h6>
+                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
+                    <div class="portfolio_hover_icon">
+                      <a href="/images/banner/banner2 .jpg" class="popup-img"><i class="fa fa-expand"></i></a>
+                      <a href=""><i class="fa fa-search"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+       
+        </div>
+
+      </div>
+    </div>
+    <!--End off row -->
+  </div>
+  <!--End off container -->
+</section><!-- End off Portfolio section-->
+
+<hr class="mb-5" />
+<div class="container">
+  <div  >
+    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SẢN PHẨM VÁY</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+      ng-repeat="item in products | filter:'Váy' | limitTo: 4 : 5">
+      <div class="card">
+        <div class="product_x w-100">
+          <img class="first-img w-100" ng-src="{{item.images[0]}}" alt="{{item.name}}">
+          <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+        </div>
+        <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+          <div class="w-75 d-block  align-item-center justify-content-center">
+            <h6 class="card-title fuchsia-rose-text "><a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+            <small class="card-text">{{item.sku}}</small>
+          </div>
+          <div class="d-wrap mr-auto align-item-center justify-content-around">
+
+            <p class="d-block">{{item.price.sale}}</p>
+            <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+          </div>
+        </div>
+        <div class="card-footer w-100 d-flex justify-content-center">
+          <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="d-block justify-content-center float-right m-2" style="color: black" href="#!allproduct/dress">xem thêm
+    ... </a>
+</div>
+
+
+<div class="container p-4">
+  <div>
+    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SẢN PHẨM ÁO</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+      ng-repeat="item in products | filter:{category:'Áo'} | limitTo: 4 : 5">
+      <div class="card">
+        <div class="product_x w-100">
+          <img class="first-img w-100" ng-src="{{item.images[0]}}" alt="{{item.name}}">
+          <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+        </div>
+        <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+          <div class="w-75 d-block  align-item-center justify-content-center">
+            <h6 class="card-title fuchsia-rose-text "><a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+            <small class="card-text">{{item.sku}}</small>
+          </div>
+          <div class="d-wrap mr-auto align-item-center justify-content-around">
+
+            <p class="d-block">{{item.price.sale}}</p>
+            <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+          </div>
+        </div>
+        <div class="card-footer w-100 d-flex justify-content-center">
+          <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="d-block justify-content-center float-right m-2" style="color: black" href="#!allproduct/dress2">xem
+    thêm ... </a>
+</div>
+
+<div class="container p-4">
+  <div  >
+    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SẢN PHẨM ĐẦM</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+      ng-repeat="item in products | filter:{category:'Đầm'} | limitTo: 4 : 5">
+      <div class="card">
+        <div class="product_x w-100">
+          <img class="first-img w-100" ng-src="{{item.images[0]}}" alt="{{item.name}}">
+          <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+        </div>
+        <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+          <div class="w-75 d-block  align-item-center justify-content-center">
+            <h6 class="card-title fuchsia-rose-text "><a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+            <small class="card-text">{{item.sku}}</small>
+          </div>
+          <div class="d-wrap mr-auto align-item-center justify-content-around">
+
+            <p class="d-block">{{item.price.sale}}</p>
+            <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+          </div>
+        </div>
+        <div class="card-footer w-100 d-flex justify-content-center">
+          <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="d-block justify-content-center float-right m-2" style="color: black" href="#!allproduct/dress2">xem
+    thêm ... </a>
+</div>
+
+
+<div class="container p-4">
+  <div  >
+    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SẢN PHẨM QUẦN</h2>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+      ng-repeat="item in products | filter:{category:'Quần'} | limitTo: 4 : 0">
+      <div class="card">
+        <div class="product_x w-100">
+          <img class="first-img w-100" ng-src="{{item.images[0]}}" alt="{{item.name}}">
+          <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+        </div>
+        <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+          <div class="w-75 d-block  align-item-center justify-content-center">
+            <h6 class="card-title fuchsia-rose-text "><a href="#!chitiet/{{item._id}}"> {{item.name}} </a></h6>
+            <small class="card-text">{{item.sku}}</small>
+          </div>
+          <div class="d-wrap mr-auto align-item-center justify-content-around">
+
+            <p class="d-block">{{item.price.sale}}</p>
+            <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+          </div>
+        </div>
+        <div class="card-footer w-100 d-flex justify-content-center">
+          <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button" class="btn btn-outline-danger">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="d-block justify-content-center float-right m-2" style="color: black" href="#!allproduct/pant">xem thêm
+    ... </a>
+</div>

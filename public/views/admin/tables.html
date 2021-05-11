@@ -1,0 +1,47 @@
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+    
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+                DataTable Example
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>code</th>
+                                <th>price</th>
+                                <th>price sale</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>code</th>
+                                <th>price</th>
+                                <th>price sale</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr ng-repeat="item in items">
+                                <td><img ng-src="{{item.images[0]}}" height="200px" width="150px" /></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.sku}}</td>   
+                                <td>{{item.price.old}}</td>
+                                <td>{{item.price.sale}}</td>
+                                
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

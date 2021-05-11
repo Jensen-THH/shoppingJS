@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "60751cd9b994713788bf66b2"
+  },
+  "username": "adminshop",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$wH9WWW6Xc/mmlYIVOdhI5e9M0L.YkdmvTuGjMSmzzjOUtyaeVTZfO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60751d361cefda2c401ee45a"
+  },
+  "username": "admin12",
+  "email": "admin12@gmail.com",
+  "password": "$2b$10$VCD/OTmyDy.jsWIUSyUxCO9gHwhhX8VSR5fWIUswDsYLAuwBclwYy",
+  "__v": 0
+}]

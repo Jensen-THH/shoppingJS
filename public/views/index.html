@@ -1,0 +1,275 @@
+<!--header -->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+  <meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />
+
+  <title>index</title>
+  <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    type="text/css" />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/chitietsanpham.css">
+  <link rel="stylesheet" href="/stylesheets/cart.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <!-- Start Top Search -->
+  <!-- <div class="top-search">
+    <div class="container">
+      <div class="input-group d-flex align-items-center justify-content-around">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control" placeholder="Search">
+        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+      </div>
+    </div>
+  </div> -->
+  <!-- End Top Search -->
+  <!-- ========================= SECTION CONTENT ========================= -->
+
+  <div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger smart-scroll fixed-top" id="searchne">
+
+      <a class="navbar-brand" href="#">{{brand}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+        <ul class="navbar-nav mx-auto" ng-repeat="item in productPortfolio">
+          <li class="nav-item active"> <a class="nav-link" href="#">{{home}} </a> </li>
+          <li class="nav-item dropdown has-megamenu" ng-repeat="i in item.collections">
+            <a class="nav-link dropdown-toggle" href="!#" data-toggle="dropdown"> {{i.name}} </a>
+            <div class="dropdown-menu megamenu" role="menu">
+              <div class="row">
+                <div class="contentx">
+                  <div class="rows col-md-5">
+                    <img ng-src="{{i.img}}">
+                  </div>
+                  <div class="rowk  col-md-3">
+                    <ul class="mega-links mx-auto" ng-repeat="y in i.chitiet">
+                      <li ng-repeat="(key,value) in y"><a href="#!{{value}}" class="button1"> {{key}} </a></li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- end row -->
+            </div> <!-- dropdown-mega-menu.// -->
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Start Atribute Navigation -->
+          <li class="nav-item"><a class="nav-link" href="#!searchPage"><i class="fa fa-search" aria-hidden="true"></i>
+            </a></li>
+          <!-- <li id="search" class="search nav-item"><a class="nav-link" href="#"><i class="fa fa-search"
+                aria-hidden="true"></i> </a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#!cart"><i class="fa fa-shopping-bag"></i> </a></li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Login </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a class="dropdown-item" href="#">Customer</a></li>
+              <li><a class="dropdown-item" href="#"> Sign up </a></li>
+            </ul>
+          </li> -->
+
+        </ul>
+
+      </div> <!-- navbar-collapse.// -->
+
+    </nav>
+  </div>
+  <!--header end -->
+
+
+
+
+  <div ng-view autoscroll="true"></div>
+
+
+
+
+  <!--footer -->
+  <!-- scroll up-->
+  <div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+  </div><!-- End off scroll up -->
+  <!----->
+
+  <footer id="footer">
+    <hr>
+    <!--Footer-->
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="companyinfo">
+              <h2><span>Js</span>-shop</h2>
+              <p>Thời trang nữ siêu đẹp</p>
+            </div>
+          </div>
+          <div class="col-sm-7 d-flex">
+            <div class="col-sm-3">
+              <div class="video-gallery text-center">
+                <a href="#">
+                  <div class="iframe-img">
+                    <img src="images/map.png" alt="" />
+                  </div>
+                  <div class="overlay-icon">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <p>Circle of Hands</p>
+                <h2>24 DEC 2021</h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="video-gallery text-center">
+                <a href="#">
+                  <div class="iframe-img">
+                    <img src="images/map.png" alt="" />
+                  </div>
+                  <div class="overlay-icon">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <p>Circle of Hands</p>
+                <h2>24 DEC 2021</h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="video-gallery text-center">
+                <a href="#">
+                  <div class="iframe-img">
+                    <img src="images/map.png" alt="" />
+                  </div>
+                  <div class="overlay-icon">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <p>Circle of Hands</p>
+                <h2>24 DEC 2021</h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="video-gallery text-center">
+                <a href="#">
+                  <div class="iframe-img">
+                    <img src="images/map.png" alt="" />
+                  </div>
+                  <div class="overlay-icon">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <p>Circle of Hands</p>
+                <h2>24 DEC 2021</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="address">
+              <img src="/images/map.png" alt="" />
+              <p>Jensen world</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-widget">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2  mx-auto">
+            <div class="single-widget">
+              <h2>Service</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="">Online Help JS</a></li>
+                <li><a href="">Contact JensenStore</a></li>
+                <li><a href="">Order Status</a></li>
+                <li><a href="">Change Location</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="single-widget">
+              <h2>Quick Shop</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="">T-Shirt</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="single-widget">
+              <h2>Policies</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Privecy Policy</a></li>
+                <li><a href="">Refund Policy</a></li>
+                <li><a href="">Billing System</a></li>
+                <li><a href="">Ticket System</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="single-widget">
+              <h2>About Shopper</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="">Company Information</a></li>
+                <li><a href="">Copyright</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3 col-sm-offset-1">
+            <div class="single-widget">
+              <h2>About Shopper</h2>
+              <form action="#" class="searchform">
+                <input type="text" placeholder="Your email address" />
+                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <p class="pull-left">Copyright © 2021 . All rights reserved.</p>
+          <p class="pull-right">Designed by <span><a target="_blank" href="">me</a></span></p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous"></script>
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="/javascripts/angularJs.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/javascripts/script_menu.js"></script>
+</body>
+
+</html>
+<!--footer end -->

@@ -1,0 +1,53 @@
+<div class="container">
+    <div  class="row text-center p-4">
+        <h1 class="col-md-12">TÌM KIẾM SẢN PHẨM</h1>
+    </div>
+    <div class="row mb-5 flew-wrap justify-content-between">
+       
+            <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect1">Danh mục</label>
+                <select class="form-control mt-2" id="exampleFormControlSelect1" ng-model="order">
+                    <option value="">chọn danh mục</option>
+                    <option value="Áo">Áo</option>
+                    <option value="Quần">Quần</option>
+                    <option value="Đầm">Đầm</option>
+                    <option value="Quần">Quần</option>
+
+                </select>
+            </div>
+           <div class="form-group col-md-6">
+            <label for="exampleFormControlSelect2">Thông tin chi tiết</label>
+            <input id="" type="text" class="form-control" placeholder="Nhập thông tin sản phẩm cần tìm"
+            ng-model="searchne">
+            </div>
+       
+      
+    </div>
+    <div class="row">
+        <div class="col-md-3 pb-3  d-flex flex-wrap align-item-center justify-content-around"
+            ng-repeat="item in products | filter : {category : order } | filter : searchne ">
+            <div class="card">
+                <div class="product_x w-100">
+                    <img class="first-img w-100" ng-src="{{item.images[1]}}" alt="{{item.name}}">
+                    <img class="second-img  w-100" ng-src="{{item.images[3]}}" alt="{{item.name}}">
+                </div>
+                <div class="card-body p-2 d-flex  align-item-center justify-content-around">
+                    <div class="w-75 d-block  align-item-center justify-content-center">
+                        <h6 class="card-title fuchsia-rose-text "> <a href="#!chitiet/{{item._id}}"> {{item.name}} </a>
+                        </h6>
+                        <small class="card-text">{{item.sku}}</small>
+                    </div>
+                    <div class="d-wrap mr-auto align-item-center justify-content-around">
+
+                        <p class="d-block">{{item.price.sale}}</p>
+                        <p style="text-decoration: line-through;" class="d-block">{{item.price.old}}</p>
+                    </div>
+                </div>
+                <div class="card-footer w-100 d-flex justify-content-center">
+                    <button ng-click="addtoCart(item)" onclick="alert('đã thêm vào giỏ hàng')" type="button"
+                        class="btn btn-outline-danger">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
